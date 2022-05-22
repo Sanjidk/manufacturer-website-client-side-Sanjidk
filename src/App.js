@@ -15,7 +15,7 @@ import NotFound from './components/Shared/NotFound/NotFound';
 
 function App() {
   return (
-    <div className="max-w-7xl mx-auto px-12">
+    <div className="max-w-7xl mx-auto px-8">
       <Header></Header>
       <Routes>
         <Route path="/" element={<Home></Home>}></Route>
@@ -30,6 +30,7 @@ function App() {
         <Route path="/signup" element={<Signup></Signup>}></Route>
         <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes>
+      
     </div>
   );
 }
