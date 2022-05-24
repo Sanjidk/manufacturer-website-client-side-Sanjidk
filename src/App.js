@@ -7,6 +7,7 @@ import Tools from "./components/Home/Tools/Tools";
 import BusinessSummary from "./components/Home/BusinessSummary/BusinessSummary";
 import Blogs from "./components/Home/Blogs/Blogs";
 import MyPortfolio from "./components/Home/MyPortfolio/MyPortfolio";
+import ToolDetails from './components/Home/ToolDetails/ToolDetails';
 
 import Login from './components/Login/Login/Login';
 import Signup from './components/Login/Signup/Signup';
@@ -15,7 +16,7 @@ import NotFound from './components/Shared/NotFound/NotFound';
 
 function App() {
   return (
-    <div className="max-w-7xl mx-auto px-8">
+    <div className="max-w-7xl mx-auto px-5">
       <Header></Header>
       <Routes>
         <Route path="/" element={<Home></Home>}></Route>
@@ -24,6 +25,8 @@ function App() {
         <Route path="/business" element={<BusinessSummary></BusinessSummary>}></Route>
         <Route path="/blogs" element={<Blogs></Blogs>}></Route>
         <Route path="/portfolio" element={<MyPortfolio></MyPortfolio>}></Route>
+
+        <Route path="/items/:id" element={<ToolDetails></ToolDetails>}></Route>
 
 
         <Route path="/login" element={<Login></Login>}></Route>

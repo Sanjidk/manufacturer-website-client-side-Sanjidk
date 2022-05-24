@@ -6,7 +6,7 @@ import tools from "../../../img/tools2.png"
 const Banner = () => {
     return (
         <div>
-            <div className="carousel rounded-box mx-auto w-full">
+            <div className="carousel mt-3 rounded-box mx-auto w-full">
                 <div id="item1" className="carousel-item w-full">
                 <img src={tools} className="w-full" alt="" />
                 </div>
