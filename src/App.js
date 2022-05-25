@@ -13,7 +13,11 @@ import Login from './components/Login/Login/Login';
 import Signup from './components/Login/Signup/Signup';
 import RequireAuth from './components/Login/RequireAuth/RequireAuth';
 import NotFound from './components/Shared/NotFound/NotFound';
-import Dashboard from './components/Home/Dashboard/Dashboard';
+import Dashboard from './components/Dashboard/Dashboard/Dashboard';
+import MyOrders from './components/Dashboard/MyOrders/MyOrders';
+import MyReview from './components/Dashboard/MyReview/MyReview';
+import MyProfile from './components/Dashboard/MyProfile/MyProfile';
+import { ToastContainer } from 'react-toastify';
 
 function App() {
   return (
@@ -21,19 +25,26 @@ function App() {
       <Header></Header>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/home" element={<Home />} />
-        <Route path="/tools" element={<Tools />} />
-        <Route path="/business" element={<BusinessSummary />} />
-        <Route path="/blogs" element={<Blogs />} />
-        <Route path="/portfolio" element={<MyPortfolio />} />
+        <Route path="home" element={<Home />} />
+        <Route path="tools" element={<Tools />} />
+        <Route path="business" element={<BusinessSummary />} />
+        <Route path="blogs" element={<Blogs />} />
+        <Route path="portfolio" element={<MyPortfolio />} />
+
 
         <Route path="dashboard" element={
           <RequireAuth>
             <Dashboard />
           </RequireAuth>} >
+
+            <Route index element={<MyOrders></MyOrders>}></Route>
+            <Route path="review" element={<MyReview></MyReview>}></Route>
+            <Route path="profile" element={<MyProfile></MyProfile>}></Route>
+
         </Route>
 
-        <Route path="/tool/:id" element={
+
+        <Route path="tool/:id" element={
         <RequireAuth>
           <ToolDetails></ToolDetails>
           </RequireAuth>}></Route>
@@ -42,7 +53,7 @@ function App() {
         <Route path="signup" element={<Signup />} />
         <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes>
-
+      <ToastContainer></ToastContainer>
     </div>
   );
 }
