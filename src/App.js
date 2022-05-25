@@ -40,7 +40,6 @@ function App() {
             <Route index element={<MyOrders></MyOrders>}></Route>
             <Route path="review" element={<MyReview></MyReview>}></Route>
             <Route path="profile" element={<MyProfile></MyProfile>}></Route>
-
         </Route>
 
 
