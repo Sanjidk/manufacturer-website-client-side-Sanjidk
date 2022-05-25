@@ -6,9 +6,6 @@ const ToolDetails = () => {
     const [tool, setTool] = useState({});
     const { _id, name, img, price, description, minimumQuantity, availableQuantity } = tool;
 
-    let { quantity } = tool;
-
-
     useEffect(() => {
         const url = `http://localhost:5000/tool/${id}`;
         fetch(url)
@@ -36,7 +33,7 @@ const ToolDetails = () => {
                             <h4>Price: ${price}</h4>
                             <p className='text-1xl font-medium text-green-500'>Minimum Quantity: {minimumQuantity}</p>
                             <p className='text-1xl font-medium text-blue-600'>Available Quantity: {availableQuantity}</p>
-                            <p className="card-text ">{description}</p>
+                            <p className="card-text ">Short Details: {description}</p>
                             <button className="btn btn-primary mt-3"
                             >
                                 Order{" "}
