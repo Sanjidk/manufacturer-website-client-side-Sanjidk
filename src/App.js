@@ -33,7 +33,10 @@ function App() {
           </RequireAuth>} >
         </Route>
 
-        <Route path="/tool/:id" element={<ToolDetails></ToolDetails>}></Route>
+        <Route path="/tool/:id" element={
+        <RequireAuth>
+          <ToolDetails></ToolDetails>
+          </RequireAuth>}></Route>
 
         <Route path="login" element={<Login />} />
         <Route path="signup" element={<Signup />} />
