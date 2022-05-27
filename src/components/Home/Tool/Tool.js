@@ -19,7 +19,7 @@ const Tool = (props) => {
                 <div className="card-body items-center text-center">
                     <p className='text-2xl font-medium'>Laptop: {name}</p>
                     <p className='font-bold'>Price: ${price}</p>
-                    <p className='text-1xl font-medium text-green-600'>Minimum Quantity: {minimumQuantity}</p>
+                    <p className='text-1xl font-medium text-green-600'>Minimum Order Quantity: {minimumQuantity}</p>
                     <p className='text-1xl font-medium text-blue-600'>Available Quantity: {availableQuantity}</p>
                     <p className="text-left mt-2">{description}</p>
                     <button onClick={() => navigateItems(_id)} className="border-0 bg-primary w-100 rounded text-white fw-bold p-2">Buy Now</button>

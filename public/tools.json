@@ -1,0 +1,56 @@
+[
+    {
+      "name": "UV Filter",
+      "img": "https://i.ibb.co/rpZRV8j/uvfilter.png",
+      "price": 2000,
+      "description": "UV lens filters prevent dust and dirt from coming into contact with the lens essentially acting as a protective cover that shields your lens at all times.",
+      "minimumQuantity": 10,
+      "availableQuantity": 1200
+  
+    },
+    {
+      "name": "Cleaning Kit",
+      "img": "https://i.ibb.co/MgSYFS1/cleaningkit.png",
+      "price": 5000,
+      "description": "For cleaning, use a soft, dry cloth, such as a microfiber cloth, to clean the camera body gently of any grime, dust, or fingerprints.",
+      "minimumQuantity": 10,
+      "availableQuantity": 1200
+  
+    },
+    {
+      "name": "Tripod Stand",
+      "img": "https://i.ibb.co/PWtmL2b/tripod.png",
+      "price": 5000,
+      "description": "A tripod is a portable three-legged frame or stand, used as a platform for supporting the weight and maintaining the stability of some other object.",
+      "minimumQuantity": 10,
+      "availableQuantity": 1200
+  
+    },
+    {
+      "name": "Protected Lens",
+      "img": "https://i.ibb.co/dfhMCtX/lens.png",
+      "price": 5000,
+      "description": "A lens is a tool used to bring light to a fixed focal point. In a film camera, the lens directs light to a digital sensor.",
+      "minimumQuantity": 10,
+      "availableQuantity": 1200
+  
+    },
+    {
+      "name": "Camera Case",
+      "img": "https://i.ibb.co/tX79rNS/cameracase.png",
+      "price": 5000,
+      "description": "It is also known as messenger bags, shoulder bags are among the most popular of camera bags.",
+      "minimumQuantity": 10,
+      "availableQuantity": 1200
+  
+    },
+    {
+      "name": "Duel Battery",
+      "img": "https://i.ibb.co/Y3CkLsc/battery.png",
+      "price": 5000,
+      "description": "Most cameras accept standard AA batteries, but you have options in what kind of AA batteries you use.",
+      "minimumQuantity": 10,
+      "availableQuantity": 1200
+  
+    }
+  ]

@@ -12,7 +12,7 @@ const ToolDetails = () => {
     const { _id, name, img, price, description, minimumQuantity, availableQuantity } = tool;
 
     useEffect(() => {
-        const url = `https://sleepy-journey-49745.herokuapp.com/tool/${id}`;
+        const url = `http://localhost:5000/tool/${id}`;
         fetch(url)
             .then((res) => res.json())
             .then((data) => {

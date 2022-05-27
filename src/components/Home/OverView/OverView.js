@@ -1,18 +1,20 @@
 import React from 'react';
-import toolkit from "../../../img/cleaner.png"
+import toolkit from "../../../img/background.png"
 
 
 const OverView = () => {
   return (
-    <div className="bg-base-200 mt-10">
+    <div className="bg-base-200 mt-10 rounded-box">
       <div className="hero-content flex-col lg:flex-row">
-        <img src={toolkit} alt="" />
-        <div>
-          <h1 className="text-5xl font-bold">Box Office News!</h1>
-          <p className="py-6">
-            You can also use variant modifiers to target media queries like responsive breakpoints, dark mode, prefers-reduced-motion, and more. For example, use md:py-8 to apply the py-8 utility at only medium screen sizes and above.
+        <img className='rounded-box' src={toolkit} alt="" />
+        <div className='text-center'>
+          <h1 className="text-5xl font-bold">Offer Package</h1>
+          <h1 className="text-4xl text-blue-500 font-bold p-3">$ 1000</h1>
+          <p className="py-3">
+            The full form of DSLR is the Digital single-lens reflex. We will offer you a full package with all tools. This offer has limited time. So, do not waste your time for searching here and there. Click the below button and get this offer.
           </p>
-          <button className="btn btn-primary">Get Started</button>
+          <h5 className='font-bold my-3'>Make your life as a Professional Photographer</h5>
+          <button className='btn btn-primary'><a href="https://www.startech.com.bd/camera" target='_blank'>BUY OFFER NOW</a></button>
         </div>
       </div>
     </div>

@@ -4,6 +4,7 @@ import OverView from '../OverView/OverView';
 import Footer from '../../Shared/Footer/Footer';
 import Tools from '../Tools/Tools';
 import BusinessSummary from '../BusinessSummary/BusinessSummary';
+import Reviews from '../Reviews/Reviews';
 
 
 const Home = () => {
@@ -12,6 +13,7 @@ const Home = () => {
             <Banner></Banner>
             <Tools></Tools>
             <BusinessSummary></BusinessSummary>
+            <Reviews></Reviews>
             <OverView></OverView>
             <Footer></Footer>
         </div>

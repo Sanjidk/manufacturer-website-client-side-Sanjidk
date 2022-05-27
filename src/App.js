@@ -4,7 +4,6 @@ import Header from './components/Shared/Header/Header';
 
 import Home from "./components/Home/Home/Home";
 import Tools from "./components/Home/Tools/Tools";
-import BusinessSummary from "./components/Home/BusinessSummary/BusinessSummary";
 import Blogs from "./components/Home/Blogs/Blogs";
 import MyPortfolio from "./components/Home/MyPortfolio/MyPortfolio";
 import ToolDetails from './components/Home/ToolDetails/ToolDetails';
@@ -15,11 +14,14 @@ import RequireAuth from './components/Login/RequireAuth/RequireAuth';
 import NotFound from './components/Shared/NotFound/NotFound';
 import Dashboard from './components/Dashboard/Dashboard/Dashboard';
 import MyOrders from './components/Dashboard/MyOrders/MyOrders';
-import MyReview from './components/Dashboard/MyReview/MyReview';
 import MyProfile from './components/Dashboard/MyProfile/MyProfile';
 import { ToastContainer } from 'react-toastify';
 import Users from './components/Dashboard/Users/Users';
 import RequireAdmin from './components/Login/RequireAdmin/RequireAdmin';
+import AddReview from './components/Dashboard/AddReview/AddReview';
+import ManageProducts from './components/Dashboard/ManageProducts/ManageProducts';
+import ManageOrders from './components/Dashboard/ManageOrders/ManageOrders';
+import AddProduct from './components/Dashboard/AddProduct/AddProduct';
 
 function App() {
   return (
@@ -29,20 +31,21 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="home" element={<Home />} />
         <Route path="tools" element={<Tools />} />
-        <Route path="business" element={<BusinessSummary />} />
         <Route path="blogs" element={<Blogs />} />
         <Route path="portfolio" element={<MyPortfolio />} />
-
 
         <Route path="dashboard" element={
           <RequireAuth>
             <Dashboard />
           </RequireAuth>} >
 
-            <Route index element={<MyOrders></MyOrders>}></Route>
-            <Route path="review" element={<MyReview></MyReview>}></Route>
-            <Route path="profile" element={<MyProfile></MyProfile>}></Route>
+            <Route path="myOrders" element={<MyOrders></MyOrders>}></Route>
+            <Route path="addReview" element={<AddReview></AddReview>}></Route>
+            <Route index element={<MyProfile></MyProfile>}></Route>
             <Route path="users" element={<RequireAdmin><Users></Users></RequireAdmin>}></Route>
+            <Route path="addProduct" element={<RequireAdmin><AddProduct></AddProduct> </RequireAdmin>}></Route>
+            <Route path="manageProducts" element={<RequireAdmin><ManageProducts></ManageProducts> </RequireAdmin>}></Route>
+            <Route path="manageOrders" element={<RequireAdmin><ManageOrders></ManageOrders> </RequireAdmin>}></Route>
         </Route>
 
 

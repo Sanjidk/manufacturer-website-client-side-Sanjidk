@@ -25,9 +25,9 @@ const Header = () => {
     const mainMenu = <>
         <li><Link to="/home">Home</Link></li>
         <li><Link to="/tools">Tools</Link></li>
-        <li><Link to="/business">Business Summary</Link></li>
         <li><Link to="/blogs">Blogs</Link></li>
-        <li><Link to="/portfolio">Admin-Info</Link></li>
+        <li><Link to="/portfolio">Portfolio</Link></li>
+        
         {
             user &&
             <li><Link to="/dashboard">Dashboard</Link></li>
