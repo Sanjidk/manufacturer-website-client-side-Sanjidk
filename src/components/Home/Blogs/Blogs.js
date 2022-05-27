@@ -3,7 +3,7 @@ import Footer from '../../Shared/Footer/Footer';
 
 const Blogs = () => {
     return (
-        <div>
+        <div className='font-bold text-xl'>
             <div className="collapse rounded-lg mt-2">
                 <input type="checkbox" className="peer" />
                 <div className="collapse-title bg-primary text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content">
