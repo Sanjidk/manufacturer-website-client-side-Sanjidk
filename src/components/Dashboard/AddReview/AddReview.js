@@ -19,7 +19,7 @@ const AddReview = () => {
             description
         }
 
-        fetch('http://localhost:5000/review', {
+        fetch('https://sleepy-journey-49745.herokuapp.com/review', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',

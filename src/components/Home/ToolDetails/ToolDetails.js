@@ -14,7 +14,7 @@ const ToolDetails = () => {
 
 
     useEffect(() => {
-        const url = `http://localhost:5000/tool/${id}`;
+        const url = `https://sleepy-journey-49745.herokuapp.com/tool/${id}`;
         fetch(url)
             .then((res) => res.json())
             .then((data) => {
@@ -43,7 +43,7 @@ const ToolDetails = () => {
         
         }
 
-        fetch('http://localhost:5000/order', {
+        fetch('https://sleepy-journey-49745.herokuapp.com/order', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

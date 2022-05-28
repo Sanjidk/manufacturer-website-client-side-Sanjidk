@@ -5,7 +5,7 @@ import DeleteProductModal from '../DeleteProductModal/DeleteProductModal';
 
 const ManageProducts = () => {
     const [product, setProduct] = useState(null);
-    const { data: tools, isLoading } = useQuery('parts', () => fetch(`http://localhost:5000/tool`, {
+    const { data: tools, isLoading } = useQuery('parts', () => fetch(`https://sleepy-journey-49745.herokuapp.com/tool`, {
         headers: {
             authorization: `Bearer ${localStorage.getItem('accessToken')}`
         }
