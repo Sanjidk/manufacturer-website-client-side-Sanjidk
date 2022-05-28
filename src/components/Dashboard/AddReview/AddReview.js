@@ -4,7 +4,7 @@ import auth from '../../../firebase.init';
 
 const AddReview = () => {
     const [user] = useAuthState(auth);
-    const [select, setselect] = useState(2);
+    const [select, setSelect] = useState(2);
     console.log(user)
 
     const handleReview = (e) => {
@@ -37,17 +37,17 @@ const AddReview = () => {
     }
     return (
         <div>
-            <div class="card lg:max-w-lg bg-base-100 shadow-xl justity-center">
+            <div class="card lg:max-w-lg bg-base-100 shadow-xl justify-center">
                 <div class="card-body">
                     <h2 class="card-title">Add Your Best Review</h2>
                     <p>Select Ratings</p>
                     <div class="rating rating-lg">
                         <input type="radio" name="rating-9" class="rating-hidden" />
-                        <input onClick={() => setselect(1)} type="radio" name="rating-9" class="mask mask-star-2" />
-                        <input onClick={() => setselect(2)} type="radio" name="rating-9" class="mask mask-star-2" checked />
-                        <input onClick={() => setselect(3)} type="radio" name="rating-9" class="mask mask-star-2" />
-                        <input onClick={() => setselect(4)} type="radio" name="rating-9" class="mask mask-star-2" />
-                        <input onClick={() => setselect(5)} type="radio" name="rating-9" class="mask mask-star-2" />
+                        <input onClick={() => setSelect(1)} type="radio" name="rating-9" class="mask mask-star-2" />
+                        <input onClick={() => setSelect(2)} type="radio" name="rating-9" class="mask mask-star-2" checked />
+                        <input onClick={() => setSelect(3)} type="radio" name="rating-9" class="mask mask-star-2" />
+                        <input onClick={() => setSelect(4)} type="radio" name="rating-9" class="mask mask-star-2" />
+                        <input onClick={() => setSelect(5)} type="radio" name="rating-9" class="mask mask-star-2" />
                     </div>
                     <p>Description</p>
                     <form onSubmit={handleReview}>
