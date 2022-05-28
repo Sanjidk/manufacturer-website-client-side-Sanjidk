@@ -16,9 +16,6 @@ const Tools = () => {
           ></Tool>)
         }
         </div>
-        {/* <div className='text-center'>
-          <Link to='/manageTools'><button className='border-0 my-4 bg-success rounded text-white fw-bold p-2'>View All Items</button></Link>
-        </div> */}
       </div>
     );
 };

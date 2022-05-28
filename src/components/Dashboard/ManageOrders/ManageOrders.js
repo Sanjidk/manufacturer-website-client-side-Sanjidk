@@ -1,10 +1,17 @@
 import React from 'react';
 
-const ManageOrders = () => {
+const ManageOrders = ({ order }) => {
+    const deleteOrder = () => {
+        alert("Sorry Order Can't Delete")
+    }
     return (
-        <div>
-            <h1>My name Manage Orders</h1>
-        </div>
+        <tr>
+            <td>{order?.name.slice(0, 20)}</td>
+            <td>{order?.user}</td>
+            <td>{order?.orderQuantity}</td>
+            <td>{order?.price}</td>
+            <td><button onClick={deleteOrder} className='btn btn-xs bg-red-500 text-white'>Delete</button></td>
+        </tr>
     );
 };
 

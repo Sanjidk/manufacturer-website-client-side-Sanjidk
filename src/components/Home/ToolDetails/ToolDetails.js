@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
-import { toast } from "react-toastify";
 
 const ToolDetails = () => {
 
@@ -10,6 +9,9 @@ const ToolDetails = () => {
     const { id } = useParams();
     const [tool, setTool] = useState({});
     const { _id, name, img, price, description, minimumQuantity, availableQuantity } = tool;
+
+    const [newQuantity, setNewQuantity] = useState(10);
+
 
     useEffect(() => {
         const url = `http://localhost:5000/tool/${id}`;
@@ -25,13 +27,38 @@ const ToolDetails = () => {
       const userEmail = user?.email;
 
 
-    const handleSubmit = (event) => {
-        event.preventDefault();
+    const handleOrder = e => {
+        e.preventDefault();
 
-        event.target.reset();
-        toast("Order Placed Successfully!");
+        const address = e.target.address.value;
+        const order = {
+            orderId: _id,
+            name,
+            price: price * newQuantity,
+            orderQuantity: newQuantity,
+            address,
+            user: user.email,
+            userName: user.displayName,
+            phone: e.target.phone.value
+        
+        }
 
-    };
+        fetch('http://localhost:5000/order', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(order)
+        })
+            .then(res => res.json())
+            .then(data => {
+                if (data.success) {
+                    alert(`Your Order is Placed`)
+                }
+                setTool(null);
+            });
+
+    }
 
 
     return (
@@ -60,7 +87,7 @@ const ToolDetails = () => {
                                 {availableQuantity}
                             </h2>
                             <h2 className="my-4">
-                                <strong>Price (per unit): </strong>
+                                <strong>Price ($): </strong>
                                 <div className="indicator">
                                     {price}
                                 </div>
@@ -75,7 +102,7 @@ const ToolDetails = () => {
 
             <div className="bg-secondary bg-gradient-to-r from-secondary to-accent lg:w-3/4 mx-auto rounded-xl py-5 my-5">
                 <h1 className='text-white text-3xl text-center font-bold'>Place Your Order Here...</h1>
-                <form onSubmit={handleSubmit}>
+                <form onSubmit={handleOrder}>
                     <div className="card-body">
                         <div className="form-control lg:w-4/5 mx-auto">
                             <input type="text" name="userName" value={userName} className="input input-bordered my-2" readOnly
@@ -83,15 +110,19 @@ const ToolDetails = () => {
                             <input type="email" name="userEmail" value={userEmail} className="input input-bordered my-2" readOnly
                                 disabled />
 
-                            <input type="number" name="phoneNumber" placeholder="Phone Number" className="input input-bordered my-2" required />
-                            <input type="number" name="quantity" placeholder="Quantity" className="input input-bordered my-2" required />
-                            <textarea className="textarea textarea-bordered my-4" placeholder="Address" required></textarea>
+                            <input type="number" name="phone" placeholder="Phone Number" className="input input-bordered my-2" required />
 
-                            <button className="btn btn-primary text-white my-2">Place Order</button>
+                            <textarea name="address" className="textarea textarea-bordered my-4" placeholder="Address" required></textarea>
+
+                            <input onChange={(e) => setNewQuantity(e.target.value)} type="number" name="quantity"  min="10" max={availableQuantity} placeholder="Order quantity, minimum 10" className="input input-bordered input-primary w-full max-w-xs" required />
+
+                            <button disabled={!newQuantity || newQuantity > availableQuantity} type="submit" name="order" className="border-0 bg-primary w-full max-w-xs rounded text-white fw-bold p-2">Buy Now</button>
+
+
+
                         </div>
                     </div>
                 </form>
-
             </div>
 
         </div>
