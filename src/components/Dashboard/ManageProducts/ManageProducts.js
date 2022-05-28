@@ -33,7 +33,7 @@ const ManageProducts = () => {
                         {
                             tools.map((ap, index) => <tr key={ap._id}>
                                 <th>{index + 1}</th>
-                                <td>{ap.name?.slice(0, 10)}</td>
+                                <td>{ap.name}</td>
                                 <td>{ap.quantity}</td>
                                 <td>{ap.price}</td>
                                 <td className='card-actions'>

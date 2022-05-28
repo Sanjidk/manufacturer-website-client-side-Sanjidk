@@ -45,11 +45,11 @@ const AddProduct = () => {
             <form onSubmit={handlePostProduct} >
 
                 <div className='flex flex-col w-96 bg-blue-300 rounded-xl shadow-xl p-5 mt-5'>
-                    <input type="text" name="name" placeholder="Product Name" class="input input-bordered input-primary w-full max-w-xs m-2" />
-                    <input type="text" name="image" placeholder="Image URL" class="input input-bordered input-primary w-full max-w-xs m-2" />
-                    <input type="text" name="description" placeholder="Description" class="input input-bordered input-primary w-full max-w-xs m-2" />
-                    <input type="number" name="quantity" placeholder="Quantity" class="input input-bordered input-primary w-full max-w-xs m-2" />
-                    <input type="number" name="price" placeholder="Price" class="input input-bordered input-primary w-full max-w-xs m-2" />
+                    <input type="text" name="name" placeholder="Product Name" className="input input-bordered input-primary w-full max-w-xs m-2" />
+                    <input type="text" name="image" placeholder="Image URL" className="input input-bordered input-primary w-full max-w-xs m-2" />
+                    <input type="text" name="description" placeholder="Description" className="input input-bordered input-primary w-full max-w-xs m-2" />
+                    <input type="number" name="quantity" placeholder="Quantity" className="input input-bordered input-primary w-full max-w-xs m-2" />
+                    <input type="number" name="price" placeholder="Price" className="input input-bordered input-primary w-full max-w-xs m-2" />
 
                     <input type="submit" value="Add Product" className='btn btn-primary  mt-3 text-white w-full max-w-xs' />
                 </div>

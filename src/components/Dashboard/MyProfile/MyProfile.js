@@ -41,12 +41,12 @@ const MyProfile = () => {
             <div className=''>
                 <form onSubmit={handleUpdate} >
                     <div className='flex flex-col w-96 bg-green-300 rounded-xl shadow-xl p-5 mt-5'>
-                    <input type="text" name="name" value={user.displayName} class="input input-bordered input-primary w-full max-w-xs m-2" />
-                    <input type="email" name="email" value={user.email} class="input input-bordered input-primary w-full max-w-xs m-2" />
-                    <input type="text" name="education" placeholder="Education" class="input input-bordered input-primary w-full max-w-xs m-2" />
-                    <input type="text" name="location" placeholder="Location" class="input input-bordered input-primary w-full max-w-xs m-2" />
-                    <input type="number" name="phone" placeholder="Phone Number" class="input input-bordered input-primary w-full max-w-xs m-2" />
-                    <input type="text" name="photo" placeholder="Photo URL" class="input input-bordered input-primary w-full max-w-xs m-2" />
+                    <input type="text" name="name" value={user.displayName} className="input input-bordered input-primary w-full max-w-xs m-2" />
+                    <input type="email" name="email" value={user.email} className="input input-bordered input-primary w-full max-w-xs m-2" />
+                    <input type="text" name="education" placeholder="Education" className="input input-bordered input-primary w-full max-w-xs m-2" />
+                    <input type="text" name="location" placeholder="Location" className="input input-bordered input-primary w-full max-w-xs m-2" />
+                    <input type="number" name="phone" placeholder="Phone Number" className="input input-bordered input-primary w-full max-w-xs m-2" />
+                    <input type="text" name="photo" placeholder="Photo URL" className="input input-bordered input-primary w-full max-w-xs m-2" />
 
                     <input type="submit" value="update profile" className='btn btn-primary  mt-3 text-white w-full max-w-xs' />
                 </div>
