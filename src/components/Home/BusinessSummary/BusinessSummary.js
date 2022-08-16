@@ -9,7 +9,7 @@ const BusinessSummary = () => {
 
                 <div className="stat">
                     <div className="stat-title  text-5xl font-bold"><i className="fa-solid fa-people-line"></i></div>
-                    <div className="stat-value  py-4">500+ </div>
+                    <div className="stat-value  py-4">400+ </div>
                     <div className="stat text-3xl font-bold">customers</div>
                 </div>
                 <div className="stat">

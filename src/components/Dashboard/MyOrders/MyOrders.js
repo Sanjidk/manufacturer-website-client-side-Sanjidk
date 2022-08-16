@@ -51,20 +51,21 @@ const MyOrders = () => {
                     </thead>
                     <tbody>
                         {
-                            orders.map((ap, index) => <tr key={ap._id}>
-                                <th>{index + 1}</th>
-                                <td>{ap.name?.slice(0, 10)}</td>
-                                <td>{ap.orderQuantity}</td>
-                                <td>{ap.price}</td>
-                                <td className='card-actions'>{!ap?.paid && <button className='btn btn-xs bg-red-500 text-white cancel-modal'>
-                                    <label htmlFor="cancel-modal"
-                                        onClick={() => setOrder(ap)}
-                                    >cancel</label>
-                                </button>}</td>
-                                <td>
-                                    {(ap.price && !ap.paid) && <button onClick={handlePay} className='btn btn-xs btn-success'>pay</button>}
-                                </td>
-                            </tr>)
+                            orders.map((ap, index) =>
+                                <tr key={ap._id}>
+                                    <th>{index + 1}</th>
+                                    <td>{ap.name?.slice(0, 10)}</td>
+                                    <td>{ap.orderQuantity}</td>
+                                    <td>{ap.price}</td>
+                                    <td className='card-actions'>{!ap?.paid && <button className='btn btn-xs bg-red-500 text-white cancel-modal'>
+                                        <label htmlFor="cancel-modal"
+                                            onClick={() => setOrder(ap)}
+                                        >cancel</label>
+                                    </button>}</td>
+                                    <td>
+                                        {(ap.price && !ap.paid) && <button onClick={handlePay} className='btn btn-xs btn-success'>pay</button>}
+                                    </td>
+                                </tr>)
                         }
 
                     </tbody>
